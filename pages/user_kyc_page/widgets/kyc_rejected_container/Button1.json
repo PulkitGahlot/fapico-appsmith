@@ -1,0 +1,52 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 67,
+  "boxShadow": "none",
+  "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+  "buttonVariant": "PRIMARY",
+  "disabledWhenInvalid": false,
+  "dynamicBindingPathList": [
+    {
+      "key": "buttonColor"
+    },
+    {
+      "key": "borderRadius"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "isDefaultClickDisabled": true,
+  "isDisabled": false,
+  "isLoading": false,
+  "isVisible": true,
+  "key": "qb0b86wxbj",
+  "leftColumn": 0,
+  "minWidth": 120,
+  "mobileBottomRow": 62,
+  "mobileLeftColumn": 0,
+  "mobileRightColumn": 16,
+  "mobileTopRow": 58,
+  "needsErrorInfo": false,
+  "onClick": "{{list_kyc_rejected_users.run().then(() => {\n  showAlert('Table Refreshed', 'info');\n}).catch(() => {\n  showAlert('Error Refreshing. Try again!', 'error');\n});}}",
+  "originalBottomRow": 67,
+  "originalTopRow": 61,
+  "parentColumnSpace": 13.921875,
+  "parentId": "1o7dok8vlj",
+  "parentRowSpace": 10,
+  "placement": "CENTER",
+  "recaptchaType": "V3",
+  "renderMode": "CANVAS",
+  "resetFormOnClick": false,
+  "responsiveBehavior": "hug",
+  "rightColumn": 16,
+  "text": "Refresh Table",
+  "topRow": 61,
+  "type": "BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "71u1u9f2x1",
+  "widgetName": "Button1"
+}

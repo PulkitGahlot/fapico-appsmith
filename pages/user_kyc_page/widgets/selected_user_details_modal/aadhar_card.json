@@ -1,0 +1,42 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 41,
+  "boxShadow": "none",
+  "defaultImage": "https://assets.appsmith.com/widgets/default.png",
+  "dynamicBindingPathList": [
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "image"
+    }
+  ],
+  "dynamicTriggerPathList": [],
+  "enableDownload": false,
+  "enableRotation": false,
+  "flexVerticalAlignment": "start",
+  "image": "{{kyc_pending_users.selectedRow.photoUrls.aadharCard}}",
+  "imageShape": "RECTANGLE",
+  "isLoading": false,
+  "isVisible": true,
+  "key": "zy93cxmv5t",
+  "leftColumn": 1,
+  "maxZoomLevel": 1,
+  "mobileBottomRow": 20,
+  "mobileLeftColumn": 9,
+  "mobileRightColumn": 21,
+  "mobileTopRow": 8,
+  "needsErrorInfo": false,
+  "objectFit": "contain",
+  "parentColumnSpace": 10.6875,
+  "parentId": "syji9bv4c6",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "rightColumn": 39,
+  "topRow": 6,
+  "type": "IMAGE_WIDGET",
+  "version": 1,
+  "widgetId": "xipg1nnuef",
+  "widgetName": "aadhar_card"
+}

@@ -1,0 +1,51 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 34,
+  "boxShadow": "none",
+  "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+  "buttonStyle": "PRIMARY",
+  "buttonVariant": "SECONDARY",
+  "disabledWhenInvalid": false,
+  "dynamicBindingPathList": [
+    {
+      "key": "buttonColor"
+    },
+    {
+      "key": "borderRadius"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "isDefaultClickDisabled": true,
+  "isDisabled": false,
+  "isLoading": false,
+  "isVisible": true,
+  "key": "qb0b86wxbj",
+  "leftColumn": 41,
+  "minWidth": 120,
+  "mobileBottomRow": 22,
+  "mobileLeftColumn": 31,
+  "mobileRightColumn": 47,
+  "mobileTopRow": 18,
+  "needsErrorInfo": false,
+  "onClick": "{{kyc_rejected.run().then(() => {\n  list_kyc_pending_users.run();\n  showAlert('Kyc Rejected', 'info');\n  closeModal('');\n  list_kyc_rejected_users.run();\n}).catch(() => {\n  showAlert('Error updating. Try again!', 'error');\n});}}",
+  "originalBottomRow": 34,
+  "originalTopRow": 29,
+  "parentId": "syji9bv4c6",
+  "placement": "CENTER",
+  "recaptchaType": "V3",
+  "renderMode": "CANVAS",
+  "resetFormOnClick": false,
+  "responsiveBehavior": "hug",
+  "rightColumn": 61,
+  "text": "Reject",
+  "topRow": 29,
+  "type": "BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "fsej48922d",
+  "widgetName": "reject_button"
+}

@@ -1,0 +1,11 @@
+{
+  "gitSyncId": "68f63db8776f146cd971e08f_a7cfc9d4-52ce-4979-8497-3a05be49030a",
+  "id": "leads_page_distributor_function",
+  "unpublishedCollection": {
+    "name": "distributor_function",
+    "pageId": "leads_page",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": []
+  }
+}
