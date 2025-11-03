@@ -34,25 +34,27 @@
   "columnOrder": [
     "name",
     "kycStatus",
-    "walletBallance",
     "service_category",
+    "active_plan",
+    "walletBalance",
     "customColumn1",
     "phoneNumber",
     "photoUrls",
     "_ref",
     "email",
     "current_lead_count",
-    "active_plan"
+    "userId"
   ],
-  "columnUpdatedAt": 1761313621374,
+  "columnUpdatedAt": 1762195653737,
   "columnWidthMap": {
     "activePlan": 254,
-    "customColumn1": 127,
+    "customColumn1": 88,
     "email": 256,
     "kycStatus": 209,
-    "name": 330,
+    "name": 201,
     "phoneNumber": 195,
     "userType": 273.828125,
+    "walletBalance": 165,
     "walletBallance": 203
   },
   "customIsLoading": false,
@@ -92,9 +94,6 @@
       "key": "primaryColumns.name.computedValue"
     },
     {
-      "key": "primaryColumns.walletBallance.computedValue"
-    },
-    {
       "key": "primaryColumns.email.computedValue"
     },
     {
@@ -114,6 +113,12 @@
     },
     {
       "key": "primaryColumns.active_plan.computedValue"
+    },
+    {
+      "key": "primaryColumns.walletBalance.computedValue"
+    },
+    {
+      "key": "primaryColumns.userId.computedValue"
     }
   ],
   "dynamicPropertyPathList": [
@@ -241,7 +246,7 @@
       "isDiscardVisible": true,
       "isEditable": false,
       "isSaveVisible": true,
-      "isVisible": true,
+      "isVisible": false,
       "label": "current_lead_count",
       "notation": "standard",
       "originalId": "current_lead_count",
@@ -481,19 +486,55 @@
       "verticalAlignment": "CENTER",
       "width": 150
     },
-    "walletBallance": {
-      "alias": "walletBallance",
+    "userId": {
+      "alias": "userId",
       "allowCellWrapping": false,
       "allowSameOptionsInNewRow": true,
-      "columnType": "number",
-      "computedValue": "{{(() => { const tableData = kyc_pending_users.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"walletBallance\"])) : walletBallance })()}}",
+      "cellBackground": "",
+      "columnType": "text",
+      "computedValue": "{{(() => { const tableData = kyc_pending_users.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"userId\"])) : userId })()}}",
       "currencyCode": "USD",
       "decimals": 0,
       "enableFilter": true,
       "enableSort": true,
+      "fontStyle": "",
       "horizontalAlignment": "LEFT",
-      "id": "walletBallance",
-      "index": 7,
+      "id": "userId",
+      "index": 9,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": false,
+      "label": "userId",
+      "notation": "standard",
+      "originalId": "userId",
+      "sticky": "",
+      "textColor": "",
+      "textSize": "0.875rem",
+      "thousandSeparator": true,
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
+    "walletBalance": {
+      "alias": "walletBalance",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "cellBackground": "",
+      "columnType": "number",
+      "computedValue": "{{(() => { const tableData = kyc_pending_users.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"walletBalance\"])) : walletBalance })()}}",
+      "currencyCode": "USD",
+      "decimals": 0,
+      "enableFilter": true,
+      "enableSort": true,
+      "fontStyle": "",
+      "horizontalAlignment": "LEFT",
+      "id": "walletBalance",
+      "index": 4,
       "isCellEditable": false,
       "isCellVisible": true,
       "isDerived": false,
@@ -502,10 +543,11 @@
       "isEditable": false,
       "isSaveVisible": true,
       "isVisible": true,
-      "label": "walletBallance",
+      "label": "walletBalance",
       "notation": "standard",
-      "originalId": "walletBallance",
+      "originalId": "walletBalance",
       "sticky": "",
+      "textColor": "",
       "textSize": "0.875rem",
       "thousandSeparator": true,
       "validation": {},

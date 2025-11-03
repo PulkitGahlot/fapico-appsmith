@@ -8,14 +8,14 @@ export default {
 			showAlert('Please upload a file first.', 'error');
 			return;
 		}
-		
+
 		const sheet = sheets[0]; // Get the first sheet object
-		
+
 		if (!sheet.data || sheet.data.length < 2) {
 			showAlert('File has no data rows.', 'error');
 			return;
 		}
-		
+
 		const headers = sheet.data[0]; // Get header row
 		const rows = sheet.data.slice(1); // Get all other data rows
 
@@ -30,7 +30,7 @@ export default {
 			});
 			return obj;
 		});
-		
+
 		// -----------------------------------------------------------------
 		// 2. VALIDATE THE DATA
 		// -----------------------------------------------------------------
@@ -60,6 +60,12 @@ export default {
 				continue;
 			}
 			try {
+				
+				// Automatically add the category to your Firestore 'service_categories' collection.
+        // This query will do nothing if the category already exists.
+        await checkAndAddCategory.run({ categoryName: leadCategory });
+
+
 				const newLeadObject = {
 					name: lead.Name,
 					email: lead.EmailId,
@@ -73,7 +79,7 @@ export default {
 					source_file: sheet_picker.files[0].name,
 					created_at: new Date().toISOString()
 				};
-				
+
 				// Run your 4 Firebase queries
 				const newLeadRef = await addLeadToDB.run({ newLeadData: newLeadObject });
 				const newLeadId = newLeadRef.id;
@@ -82,7 +88,7 @@ export default {
 					console.log(`No users found for category: ${leadCategory}`);
 					continue;
 				}
-				
+
 				for (const userDoc of usersSnapshot) {
 					const userId = userDoc._ref.id;
 					const plan = userDoc.active_plan || 'none';
@@ -100,7 +106,7 @@ export default {
 							leadStatus = "locked";
 						}
 					}
-					
+
 					const newLinkObject = {
 						userId: userId,
 						leadId: newLeadId,
