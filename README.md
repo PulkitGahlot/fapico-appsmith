@@ -8,4 +8,4 @@ This app is built using Appsmith. Turn any datasource into an internal app in mi
 
 ##### You can visit the application using the below link
 
-###### [![](https://assets.appsmith.com/git-sync/Buttons.svg) ](https://fapico-app.appsmith.com/applications/68f63db8776f146cd971e08f/pages/68f63db8776f146cd971e092) [![](https://assets.appsmith.com/git-sync/Buttons2.svg)](https://fapico-app.appsmith.com/applications/68f63db8776f146cd971e08f/pages/68f63db8776f146cd971e092/edit)
+###### [![](https://assets.appsmith.com/git-sync/Buttons.svg) ](https://fapico-app.appsmith.com/applications/68f63db8776f146cd971e08f/pages/68f63db8776f146cd971e092) <!-- [![](https://assets.appsmith.com/git-sync/Buttons2.svg)](https://fapico-app.appsmith.com/applications/68f63db8776f146cd971e08f/pages/68f63db8776f146cd971e092/edit) -->
